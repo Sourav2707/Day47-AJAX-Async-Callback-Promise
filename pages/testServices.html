@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX callback anr promise</title>
+    <style>
+        .body { margin : auto; }
+        div {
+            border : 1px solid blue;
+            background-color: lightblue;
+            padding: 50px;
+            width: 80%;
+            font-size: xx-large;
+            margin-top: 50px;
+        }
+    </style>
+    <script src = "C:\Users\Sourav Prasanna\OneDrive\Desktop\Day47-AJAX-Async-Callback-Promise\js\ajaxCallback.js"></script>
+</head>
+<body>
+    <h1>Results</h1>
+    <div id = "get_services"></div>
+    <script>
+        const getElement = document.querySelector("#get_services");
+        const getURL = "http://localhost:3000/employees/1";
+        promiseCall("GET", getURL, true)
+            .then(responseText => {
+                getElement.textContent = "Get User Data : "+responseText;
+            })
+            .catch(error => {
+                getElement.textContent = "GET Error Status : "+JSON.stringify(error)
+            });
+    </script>
+</body>
+</html>
