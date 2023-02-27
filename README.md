@@ -1,1 +1,1 @@
-LFP batch 235 - Demonstrating Ajax async callback and promise
+LFP batch 235 - Day 47 emonstrating Ajax async callback and promise
